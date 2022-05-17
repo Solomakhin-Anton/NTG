@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c7c39e30-61d8-4787-b4c8-2db1673ac6e1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ProjectId" id="29I0rOj3y4WXdBOCXmrrzvjWZZn" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.Start.generateCollection">
+    <configuration name="Start.generateCollection" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;Start.generateCollection&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests.testForCreateJson" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;Tests.testForCreateJson&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Start.generateCollection" />
+        <item itemvalue="Gradle.Tests.testForCreateJson" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7c39e30-61d8-4787-b4c8-2db1673ac6e1" name="Default Changelist" comment="" />
+      <created>1652785489450</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652785489450</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="629" y="401" width="457" height="282" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1652786048927">
+      <screen x="37" y="25" width="1643" height="1025" />
+    </state>
+    <state x="629" y="401" width="457" height="282" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/37.25.1643.1025@37.25.1643.1025" timestamp="1652786048927" />
+    <state width="1598" height="277" key="GridCell.Tab.0.bottom" timestamp="1652786914354">
+      <screen x="37" y="25" width="1643" height="1025" />
+    </state>
+    <state width="1598" height="277" key="GridCell.Tab.0.bottom/37.25.1643.1025@37.25.1643.1025" timestamp="1652786914354" />
+    <state width="1598" height="277" key="GridCell.Tab.0.bottom/39.25.1641.1025@39.25.1641.1025" timestamp="1652785924055" />
+    <state width="1598" height="277" key="GridCell.Tab.0.center" timestamp="1652786914353">
+      <screen x="37" y="25" width="1643" height="1025" />
+    </state>
+    <state width="1598" height="277" key="GridCell.Tab.0.center/37.25.1643.1025@37.25.1643.1025" timestamp="1652786914353" />
+    <state width="1598" height="277" key="GridCell.Tab.0.center/39.25.1641.1025@39.25.1641.1025" timestamp="1652785924054" />
+    <state width="1598" height="277" key="GridCell.Tab.0.left" timestamp="1652786914352">
+      <screen x="37" y="25" width="1643" height="1025" />
+    </state>
+    <state width="1598" height="277" key="GridCell.Tab.0.left/37.25.1643.1025@37.25.1643.1025" timestamp="1652786914352" />
+    <state width="1598" height="277" key="GridCell.Tab.0.left/39.25.1641.1025@39.25.1641.1025" timestamp="1652785924053" />
+    <state width="1598" height="277" key="GridCell.Tab.0.right" timestamp="1652786914354">
+      <screen x="37" y="25" width="1643" height="1025" />
+    </state>
+    <state width="1598" height="277" key="GridCell.Tab.0.right/37.25.1643.1025@37.25.1643.1025" timestamp="1652786914354" />
+    <state width="1598" height="277" key="GridCell.Tab.0.right/39.25.1641.1025@39.25.1641.1025" timestamp="1652785924054" />
+  </component>
+</project>

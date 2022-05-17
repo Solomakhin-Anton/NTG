@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Start" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-17T11:24:44" hostname="MacBook-Pro-Anton.local" time="0.048">
+  <properties/>
+  <testcase name="generateCollection" classname="Start" time="0.048"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

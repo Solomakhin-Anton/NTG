@@ -1,0 +1,1633 @@
+{
+	"info": {
+		"name": "TEMP-rpu-common-person.FlSnilsInfoService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+
+	"item": [
+		{
+		"name": "SnilsInfoService",
+	"item": [
+		{
+		"name": "Negative",
+	"item": [
+		{
+		"name": "Get",
+	"item": [
+		{
+		"name": "GetWithIdFieldTypeIsString","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"value\": \"String\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/GetById",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"GetById"
+											]
+										}
+									},"response": []
+},		{
+		"name": "GetWithIdFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"value\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/GetById",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"GetById"
+											]
+										}
+									},"response": []
+}
+	]},		{
+		"name": "Create",
+	"item": [
+		{
+		"name": "CreateWithFlBaseDataIdFieldTypeIsString","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"String\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"63\"},\n  \"dic_ils_status_id\": {\"value\": \"25\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithFlBaseDataIdFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": true},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"97\"},\n  \"dic_ils_status_id\": {\"value\": \"19\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithIdFieldTypeIsString","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"75\"},\n  \"id\": {\"value\": \"String\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"26\"},\n  \"dic_ils_status_id\": {\"value\": \"40\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithIdFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"77\"},\n  \"id\": {\"value\": true},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"15\"},\n  \"dic_ils_status_id\": {\"value\": \"25\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithSnilsFieldTypeIsInteger","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"22\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": 9325},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"91\"},\n  \"dic_ils_status_id\": {\"value\": \"11\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithSnilsFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"19\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": true},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"99\"},\n  \"dic_ils_status_id\": {\"value\": \"18\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithDateStartFieldTypeIsInteger","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"32\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": 7209},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"58\"},\n  \"dic_ils_status_id\": {\"value\": \"38\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithDateStartFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"96\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": true},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"97\"},\n  \"dic_ils_status_id\": {\"value\": \"30\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithDateEndFieldTypeIsInteger","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"25\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": 367},\n  \"dic_ils_cancelation_id\": {\"value\": \"54\"},\n  \"dic_ils_status_id\": {\"value\": \"3\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithDateEndFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"23\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": true},\n  \"dic_ils_cancelation_id\": {\"value\": \"44\"},\n  \"dic_ils_status_id\": {\"value\": \"83\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithDicIlsCancelationIdFieldTypeIsString","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"80\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"String\"},\n  \"dic_ils_status_id\": {\"value\": \"35\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithDicIlsCancelationIdFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"75\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": true},\n  \"dic_ils_status_id\": {\"value\": \"88\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithDicIlsStatusIdFieldTypeIsString","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"14\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"67\"},\n  \"dic_ils_status_id\": {\"value\": \"String\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+},		{
+		"name": "CreateWithDicIlsStatusIdFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"23\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"21\"},\n  \"dic_ils_status_id\": {\"value\": true}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Create",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Create"
+											]
+										}
+									},"response": []
+}
+	]},		{
+		"name": "Update",
+	"item": [
+		{
+		"name": "UpdateWithFlBaseDataIdFieldTypeIsString","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"String\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"20\"},\n  \"dic_ils_status_id\": {\"value\": \"57\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithFlBaseDataIdFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": true},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"15\"},\n  \"dic_ils_status_id\": {\"value\": \"83\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithIdFieldTypeIsString","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"46\"},\n  \"id\": {\"value\": \"String\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"86\"},\n  \"dic_ils_status_id\": {\"value\": \"66\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithIdFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"17\"},\n  \"id\": {\"value\": true},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"73\"},\n  \"dic_ils_status_id\": {\"value\": \"9\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithSnilsFieldTypeIsInteger","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"71\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": 6520},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"54\"},\n  \"dic_ils_status_id\": {\"value\": \"63\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithSnilsFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"69\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": true},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"62\"},\n  \"dic_ils_status_id\": {\"value\": \"37\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithDateStartFieldTypeIsInteger","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"93\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": 394},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"46\"},\n  \"dic_ils_status_id\": {\"value\": \"41\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithDateStartFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"84\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": true},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"20\"},\n  \"dic_ils_status_id\": {\"value\": \"7\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithDateEndFieldTypeIsInteger","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"100\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": 6655},\n  \"dic_ils_cancelation_id\": {\"value\": \"76\"},\n  \"dic_ils_status_id\": {\"value\": \"53\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithDateEndFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"55\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": true},\n  \"dic_ils_cancelation_id\": {\"value\": \"39\"},\n  \"dic_ils_status_id\": {\"value\": \"76\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithDicIlsCancelationIdFieldTypeIsString","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"66\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"String\"},\n  \"dic_ils_status_id\": {\"value\": \"57\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithDicIlsCancelationIdFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"21\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": true},\n  \"dic_ils_status_id\": {\"value\": \"10\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithDicIlsStatusIdFieldTypeIsString","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"52\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"35\"},\n  \"dic_ils_status_id\": {\"value\": \"String\"}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+},		{
+		"name": "UpdateWithDicIlsStatusIdFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"fl_base_data_id\": {\"value\": \"91\"},\n  \"id\": {\"value\": \"0\"},\n  \"snils\": {\"value\": \"snils\"},\n  \"date_start\": {\"value\": \"2022-05-17\"},\n  \"date_end\": {\"value\": \"2022-05-17\"},\n  \"dic_ils_cancelation_id\": {\"value\": \"42\"},\n  \"dic_ils_status_id\": {\"value\": true}\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Update",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Update"
+											]
+										}
+									},"response": []
+}
+	]},		{
+		"name": "Delete",
+	"item": [
+		{
+		"name": "DeleteWithIdFieldTypeIsString","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"value\": \"String\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Delete",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Delete"
+											]
+										}
+									},"response": []
+},		{
+		"name": "DeleteWithIdFieldTypeIsBoolean","event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": ["const jsonData = pm.response.json();",
+													"",
+													"pm.test(\"Проверка времени ответа от сервера\", function () {",
+													"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+													"});",
+													"",
+													"pm.test(\"Проверка что статус = 500\", function () {",
+													"    pm.response.to.have.status(500);",
+													"});",
+													"",
+													"pm.test(\"Проверка что header Connection = close\", function () {",
+													"    pm.expect(pm.response.headers.get (\"Connection\")).to.eql(\"close\");",
+													"});",
+													"",
+													"pm.test(\"Проверка что в теле ответа есть текст \\\"error\\\"\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"error\");",
+													"});"],
+												"type": "text/javascript"
+											}
+										}
+									],"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"value\": true\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:12044/grpc/ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService/Delete",
+											"host": [
+												"localhost"
+											],
+											"port": "12044",
+											"path": [
+												"grpc",
+												"ru.gov.pfr.ecp.ebr.rpu.common.fl.SnilsInfoService",
+												"Delete"
+											]
+										}
+									},"response": []
+}
+	]}
+	]}
+	]}
+	]}
