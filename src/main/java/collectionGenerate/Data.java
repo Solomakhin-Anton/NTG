@@ -14,7 +14,7 @@ public class Data {
 
     // Методы сервиса из метадаты
     public static final List<String> serviceMethods = new ArrayList<>(Arrays.asList(
-            "Create", "", "Update", "Delete"
+            "", "", "Update", ""
     ));
 
     // Поля с указанием обертки из grpcCox'а

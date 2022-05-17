@@ -33,7 +33,7 @@ public class Creator {
     }
 
     public String createNegativeGetTests() throws Exception {
-        return createNegativeGetAndDeleteMethods(true) + jsonItemClose(isAnyMethodsExists("Get"));
+        return createNegativeGetAndDeleteMethods(true) + jsonItemClose(!isAnyMethodsExists("Get"));
     }
 
     public String createNegativeDeleteTests() throws Exception {
@@ -41,11 +41,11 @@ public class Creator {
     }
 
     public String createNegativeCreateTests() throws Exception {
-        return createNegativeCreateAndUpdateMethods(true) + jsonItemClose(isAnyMethodsExists("Create"));
+        return createNegativeCreateAndUpdateMethods(true) + jsonItemClose(!isAnyMethodsExists("Create"));
     }
 
     public String createNegativeUpdateTests() throws Exception {
-        return createNegativeCreateAndUpdateMethods(false) + jsonItemClose(isAnyMethodsExists("Update"));
+        return createNegativeCreateAndUpdateMethods(false) + jsonItemClose(!isAnyMethodsExists("Update"));
     }
 
     public String createNegativeGetAndDeleteMethods(boolean isGetRequest) throws Exception {
@@ -92,13 +92,13 @@ public class Creator {
         return method + "With" + fieldName + "Field" + (booleanStringOrInteger.toLowerCase().contains("empty") ? "IsEmpty" : ("TypeIs" + booleanStringOrInteger));
     }
 
-    public boolean isAnyMethodsExists(String currentMethod) {
-        List<String> methods = new ArrayList<>();
-        for (String meth : serviceMethods) {
-            if (meth.toLowerCase().contains(currentMethod.toLowerCase())) methods.add(meth);
-        }
-        return methods.size() > 1;
-    }
+//    public boolean isAnyMethodsExists(String currentMethod) {
+//        List<String> methods = new ArrayList<>();
+//        for (String meth : serviceMethods) {
+//            if (meth.toLowerCase().contains(currentMethod.toLowerCase())) methods.add(meth);
+//        }
+//        return methods.size() > 1;
+//    }
 
     public void existentMethod() {
         for (String meth : serviceMethods) {
@@ -106,6 +106,19 @@ public class Creator {
             if (meth.toLowerCase().contains("create")) createRequestExist = true;
             if (meth.toLowerCase().contains("update")) updateRequestExist = true;
             if (meth.toLowerCase().contains("delete")) deleteRequestExist = true;
+        }
+    }
+
+    public boolean isAnyMethodsExists(String currentMethod) {
+        switch (currentMethod.toLowerCase()) {
+            case("get"):
+                if ((createRequestExist || updateRequestExist) || deleteRequestExist) return true;
+            case ("create"):
+                if (updateRequestExist || deleteRequestExist) return true;
+            case ("update"):
+                if (deleteRequestExist) return true;
+            default:
+                return false;
         }
     }
 
