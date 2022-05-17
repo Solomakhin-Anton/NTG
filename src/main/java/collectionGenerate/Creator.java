@@ -1,13 +1,21 @@
 package collectionGenerate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static collectionGenerate.Data.*;
 import static collectionGenerate.JsonTemplates.*;
-import static collectionGenerate.TextFormatter.getAllVariables;
 import static collectionGenerate.TextFormatter.getFormattedFieldName;
 
 public class Creator {
 
+    boolean getRequestExist = false;
+    boolean createRequestExist = false;
+    boolean updateRequestExist = false;
+    boolean deleteRequestExist = false;
+
     public String createCollection() throws Exception {
+        existentMethod();
         return jsonHeader(repoServiceName) + createAllTests() + "}";
     }
 
@@ -16,14 +24,16 @@ public class Creator {
     }
 
     public String createNegativeTests() throws Exception {
-        return createFolder("Negative") + jsonItemOpen() + ((getRequestExists) ? (jsonCreateFolder("Get") + createNegativeGetTests()) : "") +
-                jsonCreateFolder("Create") + createNegativeCreateTests() + jsonCreateFolder("Update") + createNegativeUpdateTests() +
-                jsonCreateFolder("Delete") + createNegativeDeleteTests() +
+        return createFolder("Negative") + jsonItemOpen() +
+                (getRequestExist ? (jsonCreateFolder("Get") + createNegativeGetTests()) : "") +
+                (createRequestExist ? (jsonCreateFolder("Create") + createNegativeCreateTests()) : "") +
+                (updateRequestExist ? (jsonCreateFolder("Update") + createNegativeUpdateTests()) : "") +
+                (deleteRequestExist ? (jsonCreateFolder("Delete") + createNegativeDeleteTests()) : "") +
                 jsonItemClose(true);
     }
 
     public String createNegativeGetTests() throws Exception {
-        return createNegativeGetAndDeleteMethods(true) + jsonItemClose(!isNextMethodExists("Create"));
+        return createNegativeGetAndDeleteMethods(true) + jsonItemClose(isAnyMethodsExists("Get"));
     }
 
     public String createNegativeDeleteTests() throws Exception {
@@ -31,11 +41,11 @@ public class Creator {
     }
 
     public String createNegativeCreateTests() throws Exception {
-        return createNegativeCreateAndUpdateMethods(true) + jsonItemClose(!isNextMethodExists("Update"));
+        return createNegativeCreateAndUpdateMethods(true) + jsonItemClose(isAnyMethodsExists("Create"));
     }
 
     public String createNegativeUpdateTests() throws Exception {
-        return createNegativeCreateAndUpdateMethods(false) + jsonItemClose(!isNextMethodExists("Delete"));
+        return createNegativeCreateAndUpdateMethods(false) + jsonItemClose(isAnyMethodsExists("Update"));
     }
 
     public String createNegativeGetAndDeleteMethods(boolean isGetRequest) throws Exception {
@@ -82,11 +92,21 @@ public class Creator {
         return method + "With" + fieldName + "Field" + (booleanStringOrInteger.toLowerCase().contains("empty") ? "IsEmpty" : ("TypeIs" + booleanStringOrInteger));
     }
 
-    public boolean isNextMethodExists(String method) {
+    public boolean isAnyMethodsExists(String currentMethod) {
+        List<String> methods = new ArrayList<>();
         for (String meth : serviceMethods) {
-            if (meth.toLowerCase().contains(method.toLowerCase())) return true;
+            if (meth.toLowerCase().contains(currentMethod.toLowerCase())) methods.add(meth);
         }
-        return false;
+        return methods.size() > 1;
+    }
+
+    public void existentMethod() {
+        for (String meth : serviceMethods) {
+            if (meth.toLowerCase().contains("get")) getRequestExist = true;
+            if (meth.toLowerCase().contains("create")) createRequestExist = true;
+            if (meth.toLowerCase().contains("update")) updateRequestExist = true;
+            if (meth.toLowerCase().contains("delete")) deleteRequestExist = true;
+        }
     }
 
     public boolean isNextMethodExists() {

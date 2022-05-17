@@ -2,45 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7c39e30-61d8-4787-b4c8-2db1673ac6e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMP-rpu-common-person.FlSnilsInfoService.postman_collection.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/collectionGenerate/Assertions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/collectionGenerate/Creator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/collectionGenerate/Data.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/collectionGenerate/FileWriterToJson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/collectionGenerate/JsonTemplates.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/collectionGenerate/Snippets.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/collectionGenerate/TestsGenerate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/collectionGenerate/TextFormatter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/Start.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/Start.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-Start.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collectionGenerate/Creator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collectionGenerate/Creator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/collectionGenerate/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collectionGenerate/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collectionGenerate/JsonTemplates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collectionGenerate/JsonTemplates.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,28 +112,32 @@
       <screen x="37" y="25" width="1643" height="1025" />
     </state>
     <state x="629" y="401" width="457" height="282" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/37.25.1643.1025@37.25.1643.1025" timestamp="1652786048927" />
-    <state width="1598" height="277" key="GridCell.Tab.0.bottom" timestamp="1652791240303">
-      <screen x="34" y="25" width="1646" height="1025" />
+    <state width="1598" height="277" key="GridCell.Tab.0.bottom" timestamp="1652801186366">
+      <screen x="35" y="25" width="1645" height="1025" />
     </state>
-    <state width="1598" height="277" key="GridCell.Tab.0.bottom/34.25.1646.1025@34.25.1646.1025" timestamp="1652791240303" />
+    <state width="1598" height="277" key="GridCell.Tab.0.bottom/34.25.1646.1025@34.25.1646.1025" timestamp="1652801113143" />
+    <state width="1598" height="277" key="GridCell.Tab.0.bottom/35.25.1645.1025@35.25.1645.1025" timestamp="1652801186366" />
     <state width="1598" height="277" key="GridCell.Tab.0.bottom/37.25.1643.1025@37.25.1643.1025" timestamp="1652786914354" />
     <state width="1598" height="277" key="GridCell.Tab.0.bottom/39.25.1641.1025@39.25.1641.1025" timestamp="1652785924055" />
-    <state width="1598" height="277" key="GridCell.Tab.0.center" timestamp="1652791240302">
-      <screen x="34" y="25" width="1646" height="1025" />
+    <state width="1598" height="277" key="GridCell.Tab.0.center" timestamp="1652801186365">
+      <screen x="35" y="25" width="1645" height="1025" />
     </state>
-    <state width="1598" height="277" key="GridCell.Tab.0.center/34.25.1646.1025@34.25.1646.1025" timestamp="1652791240302" />
+    <state width="1598" height="277" key="GridCell.Tab.0.center/34.25.1646.1025@34.25.1646.1025" timestamp="1652801113142" />
+    <state width="1598" height="277" key="GridCell.Tab.0.center/35.25.1645.1025@35.25.1645.1025" timestamp="1652801186365" />
     <state width="1598" height="277" key="GridCell.Tab.0.center/37.25.1643.1025@37.25.1643.1025" timestamp="1652786914353" />
     <state width="1598" height="277" key="GridCell.Tab.0.center/39.25.1641.1025@39.25.1641.1025" timestamp="1652785924054" />
-    <state width="1598" height="277" key="GridCell.Tab.0.left" timestamp="1652791240302">
-      <screen x="34" y="25" width="1646" height="1025" />
+    <state width="1598" height="277" key="GridCell.Tab.0.left" timestamp="1652801186365">
+      <screen x="35" y="25" width="1645" height="1025" />
     </state>
-    <state width="1598" height="277" key="GridCell.Tab.0.left/34.25.1646.1025@34.25.1646.1025" timestamp="1652791240302" />
+    <state width="1598" height="277" key="GridCell.Tab.0.left/34.25.1646.1025@34.25.1646.1025" timestamp="1652801113142" />
+    <state width="1598" height="277" key="GridCell.Tab.0.left/35.25.1645.1025@35.25.1645.1025" timestamp="1652801186365" />
     <state width="1598" height="277" key="GridCell.Tab.0.left/37.25.1643.1025@37.25.1643.1025" timestamp="1652786914352" />
     <state width="1598" height="277" key="GridCell.Tab.0.left/39.25.1641.1025@39.25.1641.1025" timestamp="1652785924053" />
-    <state width="1598" height="277" key="GridCell.Tab.0.right" timestamp="1652791240303">
-      <screen x="34" y="25" width="1646" height="1025" />
+    <state width="1598" height="277" key="GridCell.Tab.0.right" timestamp="1652801186366">
+      <screen x="35" y="25" width="1645" height="1025" />
     </state>
-    <state width="1598" height="277" key="GridCell.Tab.0.right/34.25.1646.1025@34.25.1646.1025" timestamp="1652791240303" />
+    <state width="1598" height="277" key="GridCell.Tab.0.right/34.25.1646.1025@34.25.1646.1025" timestamp="1652801113143" />
+    <state width="1598" height="277" key="GridCell.Tab.0.right/35.25.1645.1025@35.25.1645.1025" timestamp="1652801186366" />
     <state width="1598" height="277" key="GridCell.Tab.0.right/37.25.1643.1025@37.25.1643.1025" timestamp="1652786914354" />
     <state width="1598" height="277" key="GridCell.Tab.0.right/39.25.1641.1025@39.25.1641.1025" timestamp="1652785924054" />
   </component>

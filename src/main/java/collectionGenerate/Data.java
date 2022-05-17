@@ -14,7 +14,7 @@ public class Data {
 
     // Методы сервиса из метадаты
     public static final List<String> serviceMethods = new ArrayList<>(Arrays.asList(
-            "Create", "Update", "GetById", "Delete"
+            "Create", "", "Update", "Delete"
     ));
 
     // Поля с указанием обертки из grpcCox'а
@@ -25,9 +25,6 @@ public class Data {
             "  .google.protobuf.StringValue date_end = 5;\n" +
             "  .google.protobuf.Int64Value dic_ils_cancelation_id = 6;\n" +
             "  .google.protobuf.Int64Value dic_ils_status_id";
-
-    // Если Get-запрос у сервиса существует - ставим true (в тестах сгенерируются тесты на Get). В противном случае - false
-    public static boolean getRequestExists = true;
 
     // Если ставить true - будет адрес localhost:12044, в противном случае - host.docker.internal (в адресной строке постмана)
     public static boolean isLocalhost = true;

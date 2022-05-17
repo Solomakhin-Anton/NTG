@@ -20,7 +20,7 @@ public class JsonTemplates {
     }
 
     public static String jsonItemClose(boolean isTheLastClose) {
-        return "}" + ((isTheLastClose) ? "\n\t]" : ",");
+        return "}" + (isTheLastClose ? "\n\t]" : ",");
     }
 
     public static String jsonCreateFolder(String folderName) {
